@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+  --MidDarkBlue: rgb(37, 46, 54);
+  --containerBg: rgb(28, 35, 45);
+
+  --pFontSize: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--VeryDarkBlue);
+  color: var(--White);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--containerBg);
+  height: 50vh;
+  width: 40vw;
+  padding: 3%;
+  border-radius: 20px;
+}
+
+p {
+  color: var(--LightGrey);
+  font-size: var(--pFontSize);
+  margin: 10px;
+}
+
+.btn {
+  background-color: var(--DarkBlue);
+  padding: 15px;
+  margin: 10px;
+  width: min-content;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 20px 15px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  & .btn {
+    color: var(--LightGrey);
+    outline: none;
+    border: none;
+    width: 45px;
+    &:hover {
+      background-color: var(--Orange);
+      color: var(--VeryDarkBlue);
+    }
+  }
+  & .selected {
+    background-color: var(--White);
+    color: var(--VeryDarkBlue);
+  }
+}
+
+.btn.submit {
+  outline: none;
+  border: none;
+  background-color: var(--Orange);
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Overpass", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--White);
+  }
+}
